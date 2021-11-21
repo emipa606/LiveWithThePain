@@ -14,7 +14,7 @@ Pawns learn to cope with it and will feel less pain as time goes by.
 
 
 
-Idea by: SkeleMann
+Idea by: SkeleMax
 	
 ![Image](https://i.imgur.com/O0IIlYj.png)
 

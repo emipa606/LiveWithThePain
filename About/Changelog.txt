@@ -1,4 +1,12 @@
 # Changelog for LiveWithThePain
 
+1.0.1.0 - Added modsettings:
+- Can change when the three stages occur
+- Can change the painlevel at each stage
+- Extra pain when rain/snow
+- Extra pain when cold
+
+
+
 1.0.0.0 - First publish
 

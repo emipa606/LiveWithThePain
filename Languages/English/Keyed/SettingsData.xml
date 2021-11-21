@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <LWTP.StageOne>First stage</LWTP.StageOne>
+  <LWTP.StageTwo>Second stage</LWTP.StageTwo>
+  <LWTP.StageThree>Third stage</LWTP.StageThree>
+  <LWTP.PainOne>First painlevel</LWTP.PainOne>
+  <LWTP.PainTwo>Second painlevel</LWTP.PainTwo>
+  <LWTP.PainThree>Third painlevel</LWTP.PainThree>
+  <LWTP.RainAches.Label>Increased pain when rain/snow</LWTP.RainAches.Label>
+  <LWTP.RainAches.ToolTip>Pain will double when the it rains or snows</LWTP.RainAches.ToolTip>
+  <LWTP.TempAches.Label>Increased pain when low temp</LWTP.TempAches.Label>
+  <LWTP.TempAches.ToolTip>Pain will double when the temperature is 10 degrees lower than the seasonal average</LWTP.TempAches.ToolTip>
+  <LWTP.Reset>Reset</LWTP.Reset>
+  <LWTP.Days>{0} days</LWTP.Days>
+  <LWTP.Percent>{0}%</LWTP.Percent>
+  <LWTP.version.label>Installed mod-version: {0}</LWTP.version.label>
+  <LWTP.VerboseLogging.Label>Verbose logging</LWTP.VerboseLogging.Label>
+  <LWTP.VerboseLogging.ToolTip>Verbose logging helps when looking for issues, will spam a lot in the log</LWTP.VerboseLogging.ToolTip>
+</LanguageData>
