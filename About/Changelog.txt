@@ -1,5 +1,8 @@
 # Changelog for LiveWithThePain
 
+1.0.2.0 - Republish to remove empty HugsLib news
+
+
 1.0.1.0 - Added modsettings:
 - Can change when the three stages occur
 - Can change the painlevel at each stage
