@@ -1,5 +1,8 @@
 # Changelog for LiveWithThePain
 
+1.0.4.0 - Added option to have pain be worse when recently awoken
+
+
 1.0.3.0 - Its now possible to set the pain level higher than 100% and also make it worse over time instead of better.
 
 

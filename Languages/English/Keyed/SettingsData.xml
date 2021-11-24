@@ -10,6 +10,8 @@
   <LWTP.RainAches.ToolTip>Pain will double when the it rains or snows</LWTP.RainAches.ToolTip>
   <LWTP.TempAches.Label>Increased pain when low temp</LWTP.TempAches.Label>
   <LWTP.TempAches.ToolTip>Pain will double when the temperature is 10 degrees lower than the seasonal average</LWTP.TempAches.ToolTip>
+  <LWTP.MorningAches.Label>Increased pain when recently awoken</LWTP.MorningAches.Label>
+  <LWTP.MorningAches.ToolTip>Pain will increase by up to 100% when recently awoken</LWTP.MorningAches.ToolTip>
   <LWTP.Reset>Reset</LWTP.Reset>
   <LWTP.Days>{0} days</LWTP.Days>
   <LWTP.Percent>{0}%</LWTP.Percent>

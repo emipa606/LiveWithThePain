@@ -117,6 +117,8 @@ internal class LiveWithThePainMod : Mod
             "LWTP.RainAches.ToolTip".Translate());
         listing_Standard.CheckboxLabeled("LWTP.TempAches.Label".Translate(), ref Settings.TempAches,
             "LWTP.TempAches.ToolTip".Translate());
+        listing_Standard.CheckboxLabeled("LWTP.MorningAches.Label".Translate(), ref Settings.MorningAches,
+            "LWTP.MorningAches.ToolTip".Translate());
         listing_Standard.Gap();
         listing_Standard.CheckboxLabeled("LWTP.VerboseLogging.Label".Translate(), ref Settings.VerboseLogging,
             "LWTP.VerboseLogging.ToolTip".Translate());
