@@ -14,8 +14,18 @@ Pawns learn to cope with it and will feel less pain as time goes by.
 
 
 
-There are mod-setting for changing when these changes occur and the painlevel at each stage.
-Also options for pain to double when raining/snowing and at low temperatures.
+Mod-settings
+
+
+-  When the three changes occur
+-  What pain levels they should give
+-  Making pain worse in rain/snow (+100%)
+-  Making pain worse in lower than seasonal average temperature (+100%)
+-  Making pain worse after waking up (+100% and falling with rest-level)
+
+
+
+Safe to add and remove from saves
 
 Idea by: SkeleMax
 	
