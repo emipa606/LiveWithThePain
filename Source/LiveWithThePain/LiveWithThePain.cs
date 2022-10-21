@@ -2,25 +2,24 @@
 using HarmonyLib;
 using Verse;
 
-namespace LiveWithThePain
+namespace LiveWithThePain;
+
+[StaticConstructorOnStartup]
+public static class LiveWithThePain
 {
-    [StaticConstructorOnStartup]
-    public static class LiveWithThePain
+    static LiveWithThePain()
     {
-        static LiveWithThePain()
+        var harmony = new Harmony("Mlie.LiveWithThePain");
+        harmony.PatchAll(Assembly.GetExecutingAssembly());
+    }
+
+    public static void LogMessages(string message)
+    {
+        if (!LiveWithThePainMod.Instance.Settings.VerboseLogging)
         {
-            var harmony = new Harmony("Mlie.LiveWithThePain");
-            harmony.PatchAll(Assembly.GetExecutingAssembly());
+            return;
         }
 
-        public static void LogMessages(string message)
-        {
-            if (!LiveWithThePainMod.Instance.Settings.VerboseLogging)
-            {
-                return;
-            }
-
-            Log.Message($"[LiveWithThePain]: {message}");
-        }
+        Log.Message($"[LiveWithThePain]: {message}");
     }
 }

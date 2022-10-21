@@ -15,6 +15,11 @@ public class HediffComp_GetsPermanent_PainFactor
             return;
         }
 
+        if (__instance.parent?.pawn == null)
+        {
+            return;
+        }
+
         var modifier = 1f;
 
         if (__instance.parent.ageTicks > LiveWithThePainMod.Instance.Settings.StageOne)
@@ -38,8 +43,8 @@ public class HediffComp_GetsPermanent_PainFactor
 
         if (LiveWithThePainMod.Instance.Settings.MorningAches)
         {
-            var restNeed = __instance.parent?.pawn?.needs?.TryGetNeed(NeedDefOf.Rest);
-            if (restNeed is { CurLevelPercentage: > 0.8f } && __instance.parent?.pawn?.jobs?.curDriver?.asleep == false)
+            var restNeed = __instance.parent.pawn.needs?.TryGetNeed(NeedDefOf.Rest);
+            if (restNeed is { CurLevelPercentage: > 0.8f } && __instance.parent.pawn.jobs?.curDriver?.asleep == false)
             {
                 var awakeModifier = 1 + ((restNeed.CurLevelPercentage - 0.8f) / 0.2f);
                 LiveWithThePain.LogMessages(
@@ -48,7 +53,7 @@ public class HediffComp_GetsPermanent_PainFactor
             }
         }
 
-        if (__instance.parent.pawn.Map == null)
+        if (__instance.parent.pawn != null && __instance.parent != null && __instance.parent.pawn.Map == null)
         {
             LiveWithThePain.LogMessages(
                 $"Pawn is not currently on a map, will not check for temp/rain. Returning painvalue of {__result} for {__instance.parent.pawn.NameFullColored}");
