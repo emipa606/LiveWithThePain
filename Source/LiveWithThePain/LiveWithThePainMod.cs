@@ -16,7 +16,7 @@ internal class LiveWithThePainMod : Mod
     /// <summary>
     ///     The private settings
     /// </summary>
-    public LiveWithThePainSettings settings;
+    public readonly LiveWithThePainSettings Settings;
 
 
     /// <summary>
@@ -26,27 +26,12 @@ internal class LiveWithThePainMod : Mod
     public LiveWithThePainMod(ModContentPack content) : base(content)
     {
         Instance = this;
+        Settings = GetSettings<LiveWithThePainSettings>();
         currentVersion =
             VersionFromManifest.GetVersionFromModMetaData(
                 ModLister.GetActiveModWithIdentifier("Mlie.LiveWithThePain"));
     }
-
-    /// <summary>
-    ///     The instance-settings for the mod
-    /// </summary>
-    public LiveWithThePainSettings Settings
-    {
-        get
-        {
-            if (settings == null)
-            {
-                settings = GetSettings<LiveWithThePainSettings>();
-            }
-
-            return settings;
-        }
-        set => settings = value;
-    }
+    
 
     /// <summary>
     ///     The title for the mod-settings
@@ -69,17 +54,17 @@ internal class LiveWithThePainMod : Mod
         listing_Standard.Gap();
         var spacer = 30;
         listing_Standard.Gap();
-        Settings.StageOne = (int)Widgets.HorizontalSlider(listing_Standard.GetRect(spacer), Settings.StageOne, 0,
+        Settings.StageOne = (int)Widgets.HorizontalSlider_NewTemp(listing_Standard.GetRect(spacer), Settings.StageOne, 0,
             Settings.StageTwo, false,
             $"{"LWTP.StageOne".Translate()}: {"LWTP.Days".Translate(Settings.StageOne / GenDate.TicksPerDay)}",
             null, null, 1);
-        Settings.StageTwo = (int)Widgets.HorizontalSlider(listing_Standard.GetRect(spacer), Settings.StageTwo,
+        Settings.StageTwo = (int)Widgets.HorizontalSlider_NewTemp(listing_Standard.GetRect(spacer), Settings.StageTwo,
             Settings.StageOne,
             Settings.StageThree, false,
             $"{"LWTP.StageTwo".Translate()}: {"LWTP.Days".Translate(Settings.StageTwo / GenDate.TicksPerDay)}",
             null, null,
             1);
-        Settings.StageThree = (int)Widgets.HorizontalSlider(listing_Standard.GetRect(spacer), Settings.StageThree,
+        Settings.StageThree = (int)Widgets.HorizontalSlider_NewTemp(listing_Standard.GetRect(spacer), Settings.StageThree,
             Settings.StageTwo,
             GenDate.TicksPerYear * 2,
             false,
@@ -87,14 +72,14 @@ internal class LiveWithThePainMod : Mod
             null, null, 1);
 
         listing_Standard.Gap();
-        Settings.PainOne = Widgets.HorizontalSlider(listing_Standard.GetRect(spacer), Settings.PainOne,
+        Settings.PainOne = Widgets.HorizontalSlider_NewTemp(listing_Standard.GetRect(spacer), Settings.PainOne,
             0, 2f, false,
             $"{"LWTP.PainOne".Translate()}: {"LWTP.Percent".Translate(Math.Round(Settings.PainOne * 100))}");
-        Settings.PainTwo = Widgets.HorizontalSlider(listing_Standard.GetRect(spacer),
+        Settings.PainTwo = Widgets.HorizontalSlider_NewTemp(listing_Standard.GetRect(spacer),
             Settings.PainTwo,
             0, 2f, false,
             $"{"LWTP.PainTwo".Translate()}: {"LWTP.Percent".Translate(Math.Round(Settings.PainTwo * 100))}");
-        Settings.PainThree = Widgets.HorizontalSlider(listing_Standard.GetRect(spacer), Settings.PainThree,
+        Settings.PainThree = Widgets.HorizontalSlider_NewTemp(listing_Standard.GetRect(spacer), Settings.PainThree,
             0, 2f, false,
             $"{"LWTP.PainThree".Translate()}: {"LWTP.Percent".Translate(Math.Round(Settings.PainThree * 100))}");
 

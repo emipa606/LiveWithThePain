@@ -1,5 +1,8 @@
 # Changelog for LiveWithThePain
 
+1.4.2 - Changed settings-handling for better compatibility, thanks Taranchuk
+
+
 1.4.1 - Mod updated for 1.4 and passed autotests.
 Used DeepL to update translations for ChineseSimplified, French, German, Russian
 
