@@ -4,7 +4,7 @@ using Verse;
 
 namespace LiveWithThePain;
 
-[HarmonyPatch(typeof(HediffComp_GetsPermanent), "PainFactor", MethodType.Getter)]
+[HarmonyPatch(typeof(HediffComp_GetsPermanent), nameof(HediffComp_GetsPermanent.PainFactor), MethodType.Getter)]
 public class HediffComp_GetsPermanent_PainFactor
 {
     [HarmonyPostfix]
