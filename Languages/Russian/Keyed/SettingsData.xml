@@ -19,4 +19,6 @@
   <LWTP.version.label>Установленная версия мода: {0}</LWTP.version.label>
   <LWTP.VerboseLogging.Label>Подробное протоколирование</LWTP.VerboseLogging.Label>
   <LWTP.VerboseLogging.ToolTip>Подробное ведение журнала помогает при поиске проблем, в журнале будет много спама</LWTP.VerboseLogging.ToolTip>
+  <LWTP.OnlyColonists.Label>Влияет только на управляемые пешки</LWTP.OnlyColonists.Label>
+  <LWTP.OnlyColonists.ToolTip>Затронет только колонистов, заключенных, рабов и других управляемых пешек</LWTP.OnlyColonists.ToolTip>
 </LanguageData>

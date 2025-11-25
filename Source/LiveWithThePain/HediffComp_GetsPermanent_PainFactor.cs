@@ -7,7 +7,6 @@ namespace LiveWithThePain;
 [HarmonyPatch(typeof(HediffComp_GetsPermanent), nameof(HediffComp_GetsPermanent.PainFactor), MethodType.Getter)]
 public class HediffComp_GetsPermanent_PainFactor
 {
-    [HarmonyPostfix]
     public static void Postfix(HediffComp_GetsPermanent __instance, ref float __result)
     {
         if (__result <= 0 || __instance.parent.ageTicks <= 0)
@@ -17,6 +16,13 @@ public class HediffComp_GetsPermanent_PainFactor
 
         if (__instance.parent?.pawn == null)
         {
+            return;
+        }
+
+        if (LiveWithThePainMod.Instance.Settings.OnlyColonists && !__instance.parent.pawn.IsPlayerControlled)
+        {
+            LiveWithThePain.LogMessages(
+                $"Pawn {__instance.parent.pawn.NameFullColored} is not a colonist, skipping pain calculation.");
             return;
         }
 

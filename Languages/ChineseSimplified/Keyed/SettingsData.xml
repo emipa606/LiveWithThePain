@@ -19,4 +19,6 @@
   <LWTP.version.label>已安装的模组版本：{0}</LWTP.version.label>
   <LWTP.VerboseLogging.Label>冗长的日志记录</LWTP.VerboseLogging.Label>
   <LWTP.VerboseLogging.ToolTip>在寻找问题时，粗略的日志记录有帮助，在日志中会有很多垃圾信息</LWTP.VerboseLogging.ToolTip>
+  <LWTP.OnlyColonists.Label>只影响可控制的棋子</LWTP.OnlyColonists.Label>
+  <LWTP.OnlyColonists.ToolTip>只影响殖民者、囚犯、奴隶和其他可控棋子</LWTP.OnlyColonists.ToolTip>
 </LanguageData>

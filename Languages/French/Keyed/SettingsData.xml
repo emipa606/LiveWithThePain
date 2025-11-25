@@ -19,4 +19,6 @@
   <LWTP.version.label>Version installée du module : {0}</LWTP.version.label>
   <LWTP.VerboseLogging.Label>Journalisation verbeuse</LWTP.VerboseLogging.Label>
   <LWTP.VerboseLogging.ToolTip>L'enregistrement verbeux aide à la recherche de problèmes, il y aura beaucoup de spam dans le journal.</LWTP.VerboseLogging.ToolTip>
+  <LWTP.OnlyColonists.Label>N'affecte que les pions contrôlables</LWTP.OnlyColonists.Label>
+  <LWTP.OnlyColonists.ToolTip>N'affecte que les colons, les prisonniers, les esclaves et les autres pions contrôlables.</LWTP.OnlyColonists.ToolTip>
 </LanguageData>

@@ -9,8 +9,7 @@ public static class LiveWithThePain
 {
     static LiveWithThePain()
     {
-        var harmony = new Harmony("Mlie.LiveWithThePain");
-        harmony.PatchAll(Assembly.GetExecutingAssembly());
+        new Harmony("Mlie.LiveWithThePain").PatchAll(Assembly.GetExecutingAssembly());
     }
 
     public static void LogMessages(string message)

@@ -19,4 +19,6 @@
   <LWTP.version.label>Installierte Mod-Version: {0}</LWTP.version.label>
   <LWTP.VerboseLogging.Label>Ausführliche Protokollierung</LWTP.VerboseLogging.Label>
   <LWTP.VerboseLogging.ToolTip>Ausführliche Protokollierung hilft bei der Suche nach Problemen, wird eine Menge Spam im Protokoll</LWTP.VerboseLogging.ToolTip>
+  <LWTP.OnlyColonists.Label>Betrifft nur steuerbare Spielfiguren</LWTP.OnlyColonists.Label>
+  <LWTP.OnlyColonists.ToolTip>Betrifft nur Kolonisten, Gefangene, Sklaven und andere kontrollierbare Spielfiguren</LWTP.OnlyColonists.ToolTip>
 </LanguageData>

@@ -31,16 +31,6 @@ internal class LiveWithThePainMod : Mod
             VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
     }
 
-
-    /// <summary>
-    ///     The title for the mod-settings
-    /// </summary>
-    /// <returns></returns>
-    public override string SettingsCategory()
-    {
-        return "Live With The Pain";
-    }
-
     /// <summary>
     ///     The settings-window
     ///     For more info: https://rimworldwiki.com/wiki/Modding_Tutorials/ModSettings
@@ -103,6 +93,8 @@ internal class LiveWithThePainMod : Mod
             "LWTP.TempAches.ToolTip".Translate());
         listingStandard.CheckboxLabeled("LWTP.MorningAches.Label".Translate(), ref Settings.MorningAches,
             "LWTP.MorningAches.ToolTip".Translate());
+        listingStandard.CheckboxLabeled("LWTP.OnlyColonists.Label".Translate(), ref Settings.OnlyColonists,
+            "LWTP.OnlyColonists.ToolTip".Translate());
         listingStandard.Gap();
         listingStandard.CheckboxLabeled("LWTP.VerboseLogging.Label".Translate(), ref Settings.VerboseLogging,
             "LWTP.VerboseLogging.ToolTip".Translate());
@@ -115,5 +107,15 @@ internal class LiveWithThePainMod : Mod
         }
 
         listingStandard.End();
+    }
+
+
+    /// <summary>
+    ///     The title for the mod-settings
+    /// </summary>
+    /// <returns></returns>
+    public override string SettingsCategory()
+    {
+        return "Live With The Pain";
     }
 }

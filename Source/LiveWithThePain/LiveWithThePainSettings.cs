@@ -9,6 +9,7 @@ namespace LiveWithThePain;
 internal class LiveWithThePainSettings : ModSettings
 {
     public bool MorningAches;
+    public bool OnlyColonists;
     public float PainOne = 0.75f;
     public float PainThree = 0.25f;
     public float PainTwo = 0.5f;
@@ -33,6 +34,7 @@ internal class LiveWithThePainSettings : ModSettings
         Scribe_Values.Look(ref PainThree, "PainThree", 0.25f);
         Scribe_Values.Look(ref RainAches, "RainAches");
         Scribe_Values.Look(ref TempAches, "TempAches");
+        Scribe_Values.Look(ref OnlyColonists, "OnlyColonists");
         Scribe_Values.Look(ref MorningAches, "MorningAches");
         Scribe_Values.Look(ref VerboseLogging, "VerboseLogging");
     }

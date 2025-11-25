@@ -16,6 +16,8 @@
   <LWTP.Days>{0} days</LWTP.Days>
   <LWTP.Percent>{0}%</LWTP.Percent>
   <LWTP.version.label>Installed mod-version: {0}</LWTP.version.label>
+  <LWTP.OnlyColonists.Label>Only affect controllable pawns</LWTP.OnlyColonists.Label>
+  <LWTP.OnlyColonists.ToolTip>Will only affect colonists, prisoners, slaves and other controllable pawns</LWTP.OnlyColonists.ToolTip>
   <LWTP.VerboseLogging.Label>Verbose logging</LWTP.VerboseLogging.Label>
   <LWTP.VerboseLogging.ToolTip>Verbose logging helps when looking for issues, will spam a lot in the log</LWTP.VerboseLogging.ToolTip>
 </LanguageData>
