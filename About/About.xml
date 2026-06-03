@@ -41,9 +41,8 @@ Mod-settings
 [*] Making pain worse in rain/snow (+100%)
 [*] Making pain worse in lower than seasonal average temperature (+100%)
 [*] Making pain worse after waking up (+100% and falling with rest-level)
+[*] Only affect controllable pawns
 [/list]
-
-Safe to add and remove from saves
 
 Idea by: SkeleMax
 
@@ -74,6 +73,6 @@ Since modding is just a hobby for me I expect no donations to keep modding. If y
 [*] Use [url=https://github.com/RimSort/RimSort/releases/latest]RimSort[/url] to sort your mods
 [/list] 
 
-[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2659985388][img]https://img.shields.io/github/v/release/emipa606/LiveWithThePain?label=latest%20version&amp;style=plastic&amp;labelColor=0070cd&amp;color=white[/img][/url] | tags:  pain management</description>
-  <modVersion IgnoreIfNoMatchingField="True">1.6.1</modVersion>
+[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2659985388][img]https://img.shields.io/github/v/release/emipa606/LiveWithThePain?label=latest%20version&amp;style=plastic&amp;labelColor=0070cd&amp;color=white[/img][/url] | tags: pain management</description>
+  <modVersion IgnoreIfNoMatchingField="True">1.6.2</modVersion>
 </ModMetaData>

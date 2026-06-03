@@ -6,4 +6,10 @@
     <BuildType Name="Release" />
   </Configurations>
   <Project Path="LiveWithThePain/LiveWithThePain.csproj" />
+  <Folder Name="/XML/Languages/English/Keyed/">
+    <File Path="../Languages/English/Keyed/SettingsData.xml" />
+  </Folder>
+  <Folder Name="/XML/About/">
+    <File Path="../About/about.xml" />
+  </Folder>
 </Solution>

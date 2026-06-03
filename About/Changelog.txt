@@ -1,5 +1,8 @@
 # Changelog for LiveWithThePain
 
+1.6.2 - Dynamic changes in pain should now also update thoughts/mood
+
+
 1.6.1 - Added setting to only affect controllable pawns
 Used DeepL to update translations for ChineseSimplified, French, German, Russian
 
