@@ -1,56 +1,52 @@
-# Copilot Instruction for RimWorld Modding Project: Live With The Pain
+# .github/copilot-instructions.md
 
 ## Mod Overview and Purpose
 
-**Live With The Pain** is a RimWorld mod designed to enhance the realism and complexity of injury management by introducing a system where injuries that cause permanent pain will become less painful over time. This mod reflects the human (and pawn) capacity to adapt to chronic pain and enhances gameplay depth by allowing pawns to learn to cope with their injuries as time progresses. 
-
-The mod is flexible, offering settings adjustments to tailor the experience to the player's preference. It's safe to add or remove from saved games, ensuring compatibility and ease of use.
+**Mod Name:** Live With The Pain  
+**Author:** Mlie  
+**Description:**  
+This mod enhances the experience of injuries in RimWorld by making them more dynamic over time. Specifically, injuries that cause permanent and usually painful conditions will become less painful as time progresses. This feature simulates pawns' ability to adapt and cope with long-term injuries, enhancing realism within the game.
 
 ## Key Features and Systems
 
-- **Pain Reduction Over Time:** 
-  - Pain from permanent injuries is automatically reduced as time passes.
-  - After five days, pain reduces to 75%.
-  - After one quadrum, pain reduces to 50%.
-  - After one year, it further reduces to 25%.
+- **Pain Adaptation Over Time:** 
+  - After 5 days, permanent pain is reduced to 75%.
+  - After a quadrum, permanent pain is reduced to 50%.
+  - After a year, permanent pain is reduced even further to 25%.
 
-- **Enhanced Mod Settings:**
-  - Customize when these pain reduction milestones occur.
-  - Adjust the level of pain reduction at each milestone.
+- **Modifiable Settings:**
+  - Timing for pain reduction can be adjusted.
+  - Customization of pain levels after each stage is allowed.
+  - Environmental and situational factors such as rain, snow, and cold can increase pain by 100%.
+  - Pain can fluctuate based on wakefulness, increasing by 100% and decreasing as rest replenishes.
+  - Options to restrict effects to only controllable pawns.
 
-- **Dynamic Pain Increases:**
-  - Pain can increase in certain conditions, adding layers of strategic planning for the player:
-    - When pawns are exposed to rain or snow (+100% pain).
-    - When temperatures are lower than the seasonal average (+100% pain).
-    - Upon waking up, with pain decreasing as rest increases (+100% pain initially).
+- **Harmony Patch Used:** The mod relies on the Harmony library by brrainz to facilitate changes and apply patches effectively without altering the core game files.
 
 ## Coding Patterns and Conventions
 
-- **Class Naming:** Utilize PascalCase for class names, e.g., `LiveWithThePain`, `LiveWithThePainMod`.
-- **Method Naming:** Use PascalCase for method names with descriptive verbs and nouns to clearly articulate their functionality.
+- Maintain clear separation of concerns by organizing code into distinct classes for each primary feature.
+- Use descriptive naming conventions for classes and methods to enhance readability and maintainability. For instance, `HediffComp_GetsPermanent_PainFactor` clearly describes its functionality.
+- Follow C# coding standards, such as camelCase for method names and PascalCase for class names.
 
 ## XML Integration
 
-While specific XML file details are not provided, ensure mod settings and data-driven configurations are easily adjusted via XML files. Follow standard RimWorld XML conventions for data declaration, using clear and concise language to describe the function and purpose of each element.
+- The XML file incorporated in the project (`List.xml`) should reflect any changes or configurations necessary for the mod.
+- Ensure that all XML files conform to RimWorld's schema and contain accurate pathing to avoid runtime errors.
 
 ## Harmony Patching
 
-The project should leverage the Harmony library to patch existing RimWorld methods responsibly:
-
-- **Targeting Specific Methods:** Employ Harmony to identify and patch critical methods, enhancing or modifying their workings to reflect the mod's logic.
-- **Non-Invasive Patching:** Ensure patches are minimalistic and non-invasive, preserving original game functionality where possible.
+- Utilize Harmony for non-invasive game modifications, allowing the mod to hook into the game's logic without direct source alterations.
+- Postfix methods have been employed in classes like `HediffComp_GetsPermanent_PainFactor` and `Pawn_HealthTracker_HealthTickInterval` to modify behaviors after the original methods are executed.
 
 ## Suggestions for Copilot
 
-To effectively assist with development, Copilot can help by:
+- Generate methods and classes focusing on the calculation and processing of pain adjustments over time.
+- Automate repetitive tasks such as updating pain levels and modifying game state through Harmony patches.
+- Produce robust and error-proof code snippets for handling mod settings, ensuring they are correctly read, written, and applied within RimWorld's setting infrastructure.
+- Suggest optimization techniques for reducing computational overhead when applying mod features, especially in large-scale colonies. 
 
-- Suggesting code snippets or methods to calculate the reduction in pain over time.
-- Providing templates for Harmony patches, ensuring all necessary attributes and conventions are followed.
-- Offering XML templates and patterns, particularly for storing customizable settings.
-- Generating methods within the `LiveWithThePain` class that implement the logic for dynamic pain increases.
-- Assisting in writing tests or debug tools to ensure mod settings behave as expected in different in-game scenarios.
-
-**Note to Developers:** Regularly review and refactor code suggested by Copilot to ensure it aligns with the mod's design principles and employs RimWorld's modding standards effectively.
+This file serves as guidance for how GitHub Copilot can assist in continued development and enhancement of the "Live With The Pain" mod, pushing forward the potential for more immersive and adaptive gameplay experiences.
 
 ## Project Solution Guidelines
 - Relevant mod XML files are included as Solution Items under the solution folder named XML, these can be read and modified from within the solution.
@@ -59,3 +55,11 @@ To effectively assist with development, Copilot can help by:
 - When making functional changes in this mod, ensure the documented features stay in sync with implementation; use the in-solution `.github` copy as the primary file.
 - In the solution is also a project called Assembly-CSharp, containing a read-only version of the decompiled game source, for reference and debugging purposes.
 - For any new documentation, update this copilot-instructions.md file rather than creating separate documentation files.
+
+
+## Hard rules (must follow)
+- Do NOT run commands that modify the repo (no git commit, git apply, dotnet format) unless explicitly asked.
+- Prefer minimal reads: read only the smallest code region needed (around the suspicious lines).
+- When mentioning SonarQube issues, automatically use the SonarQube MCP service to fetch and address issues instead of making inferred fixes without querying SonarQube first.
+- When mentioning the rimworld log, automatically use the Rimworld MCP service to fetch the log.
+

@@ -5,7 +5,7 @@ using Verse;
 namespace LiveWithThePain;
 
 [HarmonyPatch(typeof(HediffComp_GetsPermanent), nameof(HediffComp_GetsPermanent.PainFactor), MethodType.Getter)]
-public class HediffComp_GetsPermanent_PainFactor
+public static class HediffComp_GetsPermanent_PainFactor
 {
     public static void Postfix(HediffComp_GetsPermanent __instance, ref float __result)
     {
@@ -67,6 +67,7 @@ public class HediffComp_GetsPermanent_PainFactor
         }
 
         if (LiveWithThePainMod.Instance.Settings.RainAches &&
+            __instance.parent is { pawn: not null } &&
             __instance.parent.pawn.Map.weatherManager.RainRate > 0)
         {
             __result *= 2f;
@@ -75,6 +76,7 @@ public class HediffComp_GetsPermanent_PainFactor
         }
 
         if (LiveWithThePainMod.Instance.Settings.TempAches &&
+            __instance.parent is { pawn: not null } &&
             __instance.parent.pawn.Map.mapTemperature.OutdoorTemp <
             __instance.parent.pawn.Map.mapTemperature.SeasonalTemp - 10f)
         {
@@ -83,7 +85,10 @@ public class HediffComp_GetsPermanent_PainFactor
                 $"Pain doubled from cold temperature for {__instance.parent.pawn.NameFullColored}");
         }
 
-        LiveWithThePain.LogMessages(
-            $"Returning painvalue of {__result} for {__instance.parent.pawn.NameFullColored}");
+        if (__instance.parent is { pawn: not null })
+        {
+            LiveWithThePain.LogMessages(
+                $"Returning painvalue of {__result} for {__instance.parent.pawn.NameFullColored}");
+        }
     }
 }
